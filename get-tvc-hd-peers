@@ -1,0 +1,2 @@
+#!/bin/bash
+echo -n http://hls.peers.tv/streaming/tvc_hd/126/copy/playlist.m3u8?token=$(curl -s https://peers.tv/tvc_hd/ | grep "window.AUTH_TOKEN" | awk -F " '" '{print $2}' | awk -F "';" '{print $1}')\&client=1
